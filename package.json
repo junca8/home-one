@@ -1,0 +1,30 @@
+{
+  "name": "home-one",
+  "version": "1.0.0",
+  "description": "An npm package for Node.js to setup notifcations for simple Raspberry Pi home automation devices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junca8/home-one.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "home",
+    "automation",
+    "node"
+  ],
+  "author": "Jonathan Junca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junca8/home-one/issues"
+  },
+  "homepage": "https://github.com/junca8/home-one#readme",
+  "dependencies": {
+    "onoff": "^1.1.1",
+    "pubnub": "^4.0.8"
+  }
+}
