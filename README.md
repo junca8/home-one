@@ -4,7 +4,7 @@ home-one.js
 Connecting Raspberry Pi devices to your Home One portal.
 
 ## Setup
-This module can then be installed with npm:
+This module can be installed with npm:
 
 npm install home-one
 
