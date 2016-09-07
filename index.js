@@ -14,14 +14,14 @@ var homeOne = function(obj) {
       message: obj.title
     };
     this.pubnub.publish(publishConfig, function(status, response) {
-      if (response) console.log(response);
-      else console.log(status);
+      if (response) { console.log("Here is the response: ", response); }
+      else { console.log("Here is the status: ", status); }
     });
   };
 
   this.switch = function(pin) {
     var button = new Gpio(pin, 'in', 'both');
-    button.watch(function(err, value) {
+    button.watch.call(this, function(err, value) {
       if (value === 1) {
         this.publishMessage();
       }
