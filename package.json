@@ -1,6 +1,6 @@
 {
   "name": "home-one",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An npm package for Node.js to setup notifcations for simple Raspberry Pi home automation devices",
   "main": "index.js",
   "scripts": {
