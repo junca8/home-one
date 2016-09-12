@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Jonathan/Personal Projects/npm_packages/home-one',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Jonathan/.npm/home-one/1.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/Jonathan/.npm correctMkdir not in flight; initializing
+10 info lifecycle home-one@1.1.0~prepublish: home-one@1.1.0
+11 silly lifecycle home-one@1.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/Jonathan/.npm/home-one/1.1.0/package.tgz',
+12 verbose tar pack   '/Users/Jonathan/Personal Projects/npm_packages/home-one' ]
+13 verbose tarball /Users/Jonathan/.npm/home-one/1.1.0/package.tgz
+14 verbose folder /Users/Jonathan/Personal Projects/npm_packages/home-one
+15 verbose addLocalTarball adding from inside cache /Users/Jonathan/.npm/home-one/1.1.0/package.tgz
+16 verbose correctMkdir /Users/Jonathan/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd home-one@1.1.0
+18 verbose afterAdd /Users/Jonathan/.npm/home-one/1.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/Jonathan/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/Jonathan/.npm/home-one/1.1.0/package/package.json written
+21 silly publish { name: 'home-one',
+21 silly publish   version: '1.1.0',
+21 silly publish   description: 'An npm package for Node.js to setup notifcations for simple Raspberry Pi home automation devices',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/junca8/home-one.git' },
+21 silly publish   keywords: [ 'raspberry', 'pi', 'home', 'automation', 'node' ],
+21 silly publish   author: { name: 'Jonathan Junca' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/junca8/home-one/issues' },
+21 silly publish   homepage: 'https://github.com/junca8/home-one#readme',
+21 silly publish   dependencies: { forever: '^0.15.2', onoff: '^1.1.1', pubnub: '^4.0.8' },
+21 silly publish   readme: 'home-one.js\n==========\n\nConnecting Raspberry Pi devices to your HomeOne portal.\n\n## Setup\nThis module can be installed with npm:\n\nnpm install home-one\n\n## Usage\nFirstly, make sure you are running your application as root or with sudo, else the Raspberry Pi will not output to your HomeOne portal.\n\nSecondly, make sure you have ready the same pubnub keys used on your Home One account.\n\nBefore you can read or write, you must create a new object using the "new" keyword, then pass in an object with the following parameters: your pubnub subscribe key, your pubnub publish key, your Home One channel name and the title of your HomeOne device.\n\n#### Example\n```js\nvar homeOne = require(\'home-one\');\n\nvar myDevice = new homeOne({\n  subscribeKey: "my pubnub subscribe key",\n  publishKey: "my pubnub publish key",\n  channel: "my Home One channel",\n  title: "my Home One device title"\n});\n```\n\n## Methods\n\n### switch(pin)\nThis method takes one parameter that is the GPIO pin number on the Raspberry Pi, and is used for simple on/off sensors.\n\n#### Example\n```js\nvar homeOne = require(\'home-one\');\n\nvar myDevice = new homeOne({\n  subscribeKey: "my pubnub subscribe key",\n  publishKey: "my pubnub publish key",\n  channel: "my Home One channel",\n  title: "my Home One device title"\n});\n\nmyDevice.switch(18);\n```\n\n## Server\nOnce the file is ready, use forever to start up the server from your terminal.\n\n#### Example\n```js\n\nforever server.js\n\n```\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '42454d598ebe830e5afe8ec627e8c652edc33f23',
+21 silly publish   _id: 'home-one@1.1.0',
+21 silly publish   _shasum: '128c334407871f325ca388a0cc05ac8d47baca8f',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name home-one
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'home-one',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'home-one',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/home-one
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/Jonathan/.npm/home-one/1.1.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/home-one
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 4:31:59 PM
+33 verbose request using bearer token for auth
+34 verbose request id 5c2159a871c2ccc2
+35 http request PUT https://registry.npmjs.org/home-one
+36 http 403 https://registry.npmjs.org/home-one
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 12 Sep 2016 22:30:44 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-sjc3151-SJC',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1473719444.299539,VS0,VE125',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/Jonathan/.npm/registry.npmjs.org/home-one on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.1.0." : home-one
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid home-one
+43 verbose cwd /Users/Jonathan/Personal Projects/npm_packages/home-one
+44 error Darwin 15.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.2.2
+47 error npm  v3.9.5
+48 error code E403
+49 error "You cannot publish over the previously published version 1.1.0." : home-one
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
