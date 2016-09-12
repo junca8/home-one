@@ -1,7 +1,7 @@
 home-one.js
 ==========
 
-Connecting Raspberry Pi devices to your Home One portal.
+Connecting Raspberry Pi devices to your HomeOne portal.
 
 ## Setup
 This module can be installed with npm:
@@ -9,11 +9,11 @@ This module can be installed with npm:
 npm install home-one
 
 ## Usage
-Firstly, make sure you are running your application as root or with sudo, else the Raspberry Pi will not output to your smarthome portal.
+Firstly, make sure you are running your application as root or with sudo, else the Raspberry Pi will not output to your HomeOne portal.
 
 Secondly, make sure you have ready the same pubnub keys used on your Home One account.
 
-Before you can read or write, you must create a new object using the "new" keyword, then pass in an object with the following parameters: your pubnub subscribe key, your pubnub publish key, your Home One channel name and the title of your Home One device.
+Before you can read or write, you must create a new object using the "new" keyword, then pass in an object with the following parameters: your pubnub subscribe key, your pubnub publish key, your Home One channel name and the title of your HomeOne device.
 
 #### Example
 ```js
@@ -44,4 +44,14 @@ var myDevice = new homeOne({
 });
 
 myDevice.switch(18);
+```
+
+## Server
+Once the file is ready, use forever to start up the server from your terminal.
+
+#### Example
+```js
+
+forever server.js
+
 ```

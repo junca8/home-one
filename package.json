@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/junca8/home-one#readme",
   "dependencies": {
+    "forever": "^0.15.2",
     "onoff": "^1.1.1",
     "pubnub": "^4.0.8"
   }
