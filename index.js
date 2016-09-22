@@ -12,8 +12,8 @@ var homeOne = function(obj) {
     var publishConfig = {
       channel: obj.channel,
       message: {
-        title: obj.title,
-        value: value
+        nickname: obj.title,
+        status: value
       }
     };
     pubnub.publish(publishConfig, function(status, response) {
@@ -23,9 +23,24 @@ var homeOne = function(obj) {
   };
 
   this.switch = function(pin) {
+    var bounce = false;
+    var bounceFunc = setTimeout(function() {
+      bounce = false;
+    }, 500);
+
     var button = new Gpio(pin, 'in', 'both');
     button.watch(function(err, value) {
+      if (!bounce) {
+        bounce = true;
+        if (value === 1) {
+          value = "open";
+        }
+        else {
+          value = "closed"
+        }
         publishMessage(value);
+        bounceFunc();
+      }
     });
   };
 
